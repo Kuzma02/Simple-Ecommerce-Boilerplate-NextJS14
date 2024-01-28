@@ -3,3 +3,5 @@ export { default as Banner } from "./Banner";
 export { default as ProductItem } from "./ProductItem";
 export { default as ProductSection } from "./ProductSection";
 export { default as Footer } from "./Footer";
+export { default as Breadcrumb } from "./Breadcrumb";
+export { default as QuantityInput } from "./QuantityInput";
