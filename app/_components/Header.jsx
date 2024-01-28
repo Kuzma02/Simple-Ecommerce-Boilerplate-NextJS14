@@ -1,12 +1,16 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { BsCart4 } from "react-icons/bs";
+import { FaRegHeart } from "react-icons/fa6";
 
 const Header = () => {
   return (
     <header className="bg-white">
       <div className="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
-        <Link href="/"><Image src="/static/logo.svg" width={150} height={100} /></Link>
+        <Link href="/">
+          <Image src="/static/logo.svg" width={150} height={100} />
+        </Link>
 
         <div className="flex flex-1 items-center justify-end md:justify-between">
           <nav aria-label="Global" className="hidden md:block">
@@ -37,26 +41,27 @@ const Header = () => {
                   Contact
                 </Link>
               </li>
-
-
             </ul>
           </nav>
 
           <div className="flex items-center gap-4">
-            <div className="sm:flex sm:gap-4">
-              <a
-                className="block rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-white transition hover:bg-red-700"
-                href="/"
-              >
-                Login
-              </a>
-
-              <a
-                className="hidden rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-primary transition hover:text-red-700 sm:block"
-                href="/"
-              >
-                Register
-              </a>
+            <div className="flex gap-8 flex items-center">
+              <div className="relative">
+                <div className="w-5 h-5 bg-primary rounded-lg absolute top-[-12px] right-[-18px] flex justify-center items-center">
+                  <span className="text-[12px] text-white font-bold ">0</span>
+                </div>
+                <Link href="/wishlist">
+                  <FaRegHeart className="text-[27px] text-black cursor-pointer" />
+                </Link>
+              </div>
+              <div className="relative">
+                <div className="w-5 h-5 bg-primary rounded-lg absolute top-[-8px] right-[-15px] flex justify-center items-center">
+                  <span className="text-[12px] text-white font-bold ">0</span>
+                </div>
+                <Link href="/cart">
+                  <BsCart4 className="text-3xl text-black cursor-pointer" />
+                </Link>
+              </div>
             </div>
 
             <button className="block rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden">
