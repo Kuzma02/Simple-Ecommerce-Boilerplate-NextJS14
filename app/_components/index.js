@@ -5,3 +5,8 @@ export { default as ProductSection } from "./ProductSection";
 export { default as Footer } from "./Footer";
 export { default as Breadcrumb } from "./Breadcrumb";
 export { default as QuantityInput } from "./QuantityInput";
+export { default as AddToCartBtn } from "./AddToCartBtn";
+export { default as CartHeaderIcon } from "./CartHeaderIcon";
+export { default as HeartHeaderIcon } from "./HeartHeaderIcon";
+export { default as CartItem } from "./CartItem";
+export { default as CartList } from "./CartList";

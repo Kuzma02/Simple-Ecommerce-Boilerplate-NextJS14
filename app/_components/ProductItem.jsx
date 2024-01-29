@@ -1,10 +1,10 @@
 import React from "react";
 import Link from "next/link";
-
+import { AddToCartBtn } from ".";
 
 const ProductItem = ({ title, price, image, id }) => {
   return (
-    <Link href={`/product/${id}`} className="group relative block overflow-hidden max-w-72">
+    <div className="group relative block overflow-hidden max-w-72">
       <button className="absolute end-4 top-4 z-10 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75">
         <span className="sr-only">Wishlist</span>
 
@@ -23,30 +23,28 @@ const ProductItem = ({ title, price, image, id }) => {
           />
         </svg>
       </button>
-
-      <img
-        src={image}
-        alt="product image"
-        className="h-64 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-72"
-      />
+      <Link href={`/product/${id}`}>
+        <img
+          src={image}
+          alt="product image"
+          className="h-64 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-72"
+        />
+      </Link>
 
       <div className="relative border border-gray-100 bg-white p-6">
         <span className="whitespace-nowrap bg-primary text-white px-3 py-1.5 text-xs font-medium">
           {" "}
           New{" "}
         </span>
+        <Link href={`/product/${id}`}>
+        <h3 className="mt-4 text-lg font-medium text-gray-900">{title}</h3>
+        </Link>
 
-        <h3 className="mt-4 text-lg font-medium text-gray-900">{ title }</h3>
+        <p className="mt-1.5 text-sm text-gray-700">${price}</p>
 
-        <p className="mt-1.5 text-sm text-gray-700">${ price }</p>
-
-        <form className="mt-4">
-          <button className="block w-full rounded bg-primary text-white p-4 text-sm font-medium transition transition-colors hover:bg-red-600 hover:scale-105">
-            Add to Cart
-          </button>
-        </form>
+          <AddToCartBtn productId={id} title={title} price={price} image={image} />
       </div>
-    </Link>
+    </div>
   );
 };
 

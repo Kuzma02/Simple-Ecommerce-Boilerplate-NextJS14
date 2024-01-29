@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { BsCart4 } from "react-icons/bs";
-import { FaRegHeart } from "react-icons/fa6";
+
+import { CartHeaderIcon, HeartHeaderIcon } from ".";
 
 const Header = () => {
   return (
@@ -46,22 +46,8 @@ const Header = () => {
 
           <div className="flex items-center gap-4">
             <div className="flex gap-8 flex items-center">
-              <div className="relative">
-                <div className="w-5 h-5 bg-primary rounded-lg absolute top-[-12px] right-[-18px] flex justify-center items-center">
-                  <span className="text-[12px] text-white font-bold ">0</span>
-                </div>
-                <Link href="/wishlist">
-                  <FaRegHeart className="text-[27px] text-black cursor-pointer" />
-                </Link>
-              </div>
-              <div className="relative">
-                <div className="w-5 h-5 bg-primary rounded-lg absolute top-[-8px] right-[-15px] flex justify-center items-center">
-                  <span className="text-[12px] text-white font-bold ">0</span>
-                </div>
-                <Link href="/cart">
-                  <BsCart4 className="text-3xl text-black cursor-pointer" />
-                </Link>
-              </div>
+              <HeartHeaderIcon />
+              <CartHeaderIcon />
             </div>
 
             <button className="block rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden">
