@@ -13,3 +13,4 @@ export { default as CartList } from "./CartList";
 export { default as ClearCartBtn } from "./ClearCartBtn";
 export { default as CartItemQuantity } from "./CartItemQuantity";
 export { default as CartTotals } from "./CartTotals";
+export { default as RemoveCartItemBtn } from "./RemoveCartItemBtn";

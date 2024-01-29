@@ -6,8 +6,6 @@ const CartItemQuantity = ({amount, id}) => {
 
     const dispatch = useDispatch();
 
-    console.log(amount);
-
   return (
     <form>
           <label htmlFor="Line1Qty" className="sr-only">
