@@ -1,4 +1,4 @@
-import { Breadcrumb, QuantityInput } from '@/app/_components'
+import { Breadcrumb, SingleProductAddToCart } from '@/app/_components'
 import React from 'react'
 
 const SingleProductPage = async ({ params }) => {
@@ -18,8 +18,7 @@ const SingleProductPage = async ({ params }) => {
         <h1 className='text-6xl font-bold max-sm:text-3xl'>{product.data.attributes.title}</h1>
         <p className='text-red-500 font-bold text-5xl max-sm:text-3xl'>${product.data.attributes.price}</p>
         <p className='max-sm:text-sm text-2xl'>{ product.data.attributes.description }</p>
-        <QuantityInput />
-        <button className='text-white bg-primary py-5 px-10 font-bold transition-colors hover:bg-red-600'>Add to cart</button>
+        <SingleProductAddToCart title={product.data.attributes.title} price={product.data.attributes.price} id={params.productId} image={product.data.attributes.Image.data.attributes.url} />
     </div>
 
     </div>
