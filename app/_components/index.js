@@ -10,3 +10,6 @@ export { default as CartHeaderIcon } from "./CartHeaderIcon";
 export { default as HeartHeaderIcon } from "./HeartHeaderIcon";
 export { default as CartItem } from "./CartItem";
 export { default as CartList } from "./CartList";
+export { default as ClearCartBtn } from "./ClearCartBtn";
+export { default as CartItemQuantity } from "./CartItemQuantity";
+export { default as CartTotals } from "./CartTotals";

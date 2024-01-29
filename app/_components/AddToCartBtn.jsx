@@ -8,7 +8,7 @@ const AddToCartBtn = ({productId, title, price, image}) => {
     const dispatch = useDispatch();
 
     const onBtnClick = (productId) => {
-        dispatch(addToCart({ product: {id: productId, title, price, image}, amount: 1 }));
+        dispatch(addToCart({ product: {id: productId, title, price, image, amount: 1}}));
     }
 
   return (
